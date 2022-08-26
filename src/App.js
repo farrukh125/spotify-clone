@@ -21,7 +21,6 @@ export default function App() {
   return (
     <div>
       {token ? <Spotify /> : <Login />}
-      <Login />
     </div>
   );
 }

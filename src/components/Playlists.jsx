@@ -16,13 +16,14 @@ export default function Playlists() {
             "Content-Type": "application/json",
           },
         }
-      );
+      ); 
+      // console.log(response)
       const { items } = response.data;
       const playlists = items.map(({ name, id }) => {
         return { name, id };
       });
       dispatch({ type: reducerCases.SET_PLAYLISTS, playlists });
-       console.log(playlists);
+       // console.log(playlists);
     };
     getPlaylistData();
   }, [token, dispatch]);
